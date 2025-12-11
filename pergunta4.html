@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pergunta4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pergunta">
+        <h1 class="titulo1">Leia e responda:</h1>
+        <h2 class="texto1">
+            Dividir meus dias contigo tem feito deles mais felizes, nunca esquça
+            disso, quero que venham muito mais momentos deles.
+        </h2>
+        <h2 class="pergunta1">Das brincadeira abaixo qual não jogamos?</h2>
+    
+     <ul class="opcoes">
+            <li>Achar a palavra, com inicio e final da letra</li>
+            <li>I see with my litle eyes</li>
+            <li>Adedonha de adulto</li>
+            <li>Palavra pelo contexo</li>
+
+    </ul>
+    </div>
+    
+    <button class="verifica">VERIFICAR</button>
+    
+    <a href="pergunta5.html">
+        <button id="continuar" class="continuar" style="display:none;">CONTINUAR</button>
+    </a>
+    
+
+    <div id="toast" class="toast"></div>
+
+
+   <script>
+const opcoes = document.querySelectorAll(".opcoes li");
+const botaoVerificar = document.querySelector(".verifica");
+const botaoContinuar = document.querySelector("#continuar");
+const toast = document.getElementById("toast");
+
+let opcaoSelecionada = null;
+const respostaCorreta = "Adedonha de adulto"; 
+
+// Selecionar opções
+opcoes.forEach(opcao => {
+    opcao.addEventListener("click", () => {
+
+        // remover seleção antiga
+        opcoes.forEach(o => o.classList.remove("selecionado"));
+
+        opcao.classList.add("selecionado");
+        opcaoSelecionada = opcao.innerText;
+
+        // ativar botão verificar
+        botaoVerificar.classList.add("ativo");
+    });
+});
+
+// Verificar resposta
+botaoVerificar.addEventListener("click", () => {
+    if (!botaoVerificar.classList.contains("ativo")) return;
+
+    if (opcaoSelecionada === respostaCorreta) {
+        mostrarToast("✔ Resposta correta!", "green");
+    } else {
+        mostrarToast("✘ Resposta errada!\n Resposta correta: Adedonha de adulto", "red");
+    }
+
+    botaoVerificar.style.display = "none";
+    botaoContinuar.style.display = "block";
+});
+
+// Toast
+function mostrarToast(mensagem, cor) {
+    toast.innerText = mensagem;
+    toast.style.backgroundColor = cor;
+    toast.classList.add("show");
+
+    // permanece visível (não remove mais automáticamente)
+}
+</script>
+
+
+</body>
+</html>
