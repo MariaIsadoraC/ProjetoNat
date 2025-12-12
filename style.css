@@ -177,9 +177,14 @@ button {
 
 .verifica {
     width: 90%;
+    bottom: 20px;
+    left: 50%;
     max-width: 600px;
-    padding: 1.5rem;
-    font-size: 2.8rem;
+    padding: 1.5rem 30rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
     border: none;
     border-radius: 12px;
@@ -221,20 +226,22 @@ button {
     transform: translateY(0);
 }
 .continuar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 600px;
-    padding: 1.5rem;
+    padding: 1.5rem 30rem;
     border: none;
     border-radius: 12px;
     background-color: chartreuse;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     color: black;
-    display: none;
 }
 
 /* Página final */
@@ -265,3 +272,72 @@ button {
     height: auto;
     padding-right: 15rem;
 }
+
+/* --- AJUSTES ESPECÍFICOS PARA TELAS DO TAMANHO DO GALAXY A25 --- */
+@media (max-width: 430px) {
+
+    .container {
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .balao {
+        font-size: 2.4rem;
+        padding: 1rem 2rem;
+    }
+
+    .doodle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .doodle-area {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    button,
+    .continuar,
+    .verifica {
+        padding: 1.2rem 1rem;   /* <-- antes estava 30rem, impossível no mobile */
+        font-size: 2rem;
+        width: 95%;
+    }
+
+    .opcoes li {
+        padding: 1.5rem;
+        font-size: 2.2rem;
+    }
+
+    .toast {
+        padding: 3rem 4rem;
+        font-size: 2.5rem;
+        right: 1rem;
+        bottom: 4rem;
+    }
+
+    /* --- Personagens da página final --- */
+    .personagens-linha {
+        gap: 0.3rem;
+    }
+
+    .img-doodle {
+        width: 200px;
+        padding-left: 0;
+    }
+
+    .img-junior {
+        width: 140px;
+    }
+
+    .img-duo {
+        width: 200px;
+        padding-right: 0;
+    }
+
+}
+
