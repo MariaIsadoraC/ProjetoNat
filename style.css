@@ -23,22 +23,22 @@ html, body {
     align-items: center;
     gap: 1.9rem;   /* Espaço entre os itens */
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 /* --- TÍTULOS --- */
 h1 {
-    font-size: 8rem;        
+    font-size: 3.6rem;        
     font-weight: 900;
     color: white;
 }
 
 .balao {
-    font-size: 70px;
+    font-size: 1.6rem;
     color: white;
     background: #ffffff19;    
-    padding: 1.5rem 5rem;
-    border-radius: 1.7rem;
+    padding: 1.4rem 2.6rem;
+    border-radius: 1rem;
     position: relative;
     text-align: center;
 }
@@ -62,16 +62,16 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: flex-start; /* deixa a imagem na ESQUERDA */
-    padding-left: 0.4rem; /* opcional, para afastar da borda */
+    padding-left: 0rem; /* opcional, para afastar da borda */
 }
 
 
 .doodle {
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 .doodle img {
@@ -80,27 +80,24 @@ h1 {
     object-fit: cover;
 }
 
-a {
-    text-decoration: none;
-}
 
 
 /* --- BOTÃO --- */
 button {
     position: fixed;
-    bottom: 20px;    
+    bottom: 0px;    
     left: 50%;
     transform: translateX(-50%);  
     
     width: 90%;       
     max-width: 600px;  
-    padding: 1.5rem 30rem;
+    padding: 1rem 1rem;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 1rem;
     background-color: chartreuse;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,27 +106,27 @@ button {
 /*Página 2*/
 
 .pergunta{
-    height: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;   /* Espaço entre os itens */
+    gap: 0.2rem;   /* Espaço entre os itens */
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 .titulo1 {
-    font-size: 5rem;        
+    font-size: 3rem;        
     font-weight: 900;
     color: white;
     text-align: left;
 }
 .texto1{
-    font-size: 4.6rem;
+    font-size: 2rem;
     color: white;    
     text-align: left;
     font-weight: 300;
 }
 .pergunta1{
-   font-size: 4.6rem;
+   font-size: 2rem;
     color: white;    
     font-weight: 700;
     text-align: left;
@@ -146,18 +143,18 @@ button {
   justify-content: center;
   align-items: center;
 
-  gap: 2rem;
-  margin-top: 3rem; /* opcional */
+  gap: 1rem;
+  margin-top: 1rem; /* opcional */
 }
 
 .opcoes li {
-  width: 90%;
+  width: 95%;
   max-width: 600px;
-  padding: 2rem;
-  font-size: 3rem;
+  padding: 1rem;
+  font-size: 2rem;
   color: white;
   background-color: rgba(255,255,255,0.1);
-  border: 4px solid transparent;
+  border: 1px solid transparent;
   border-radius: 20px;
   text-align: center;
   cursor: pointer;
@@ -177,17 +174,17 @@ button {
 
 .verifica {
     width: 90%;
-    bottom: 20px;
+    bottom: 2px;
     left: 50%;
-    max-width: 600px;
-    padding: 1.5rem 30rem;
-    font-size: 3rem;
+    max-width: 500px;
+    padding: 1rem 2rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     background-color: gray; /* botão desativado */
     color: white;
     opacity: 0.5;
@@ -208,11 +205,12 @@ button {
 .toast {
     position: fixed;
     align-items: center;
-    bottom: 8rem;
-    right: 3rem;
-    padding: 7rem 10rem;
-    font-size: 5rem;
-    border-radius: 20px;
+    bottom: 5.5rem;
+    right: 1rem;
+    left: 1rem;
+    padding: 2rem 2rem;
+    font-size: 2rem;
+    border-radius: 10px;
     background-color: #333;
     color: white;
     opacity: 0;                      /* começa invisível */
@@ -230,16 +228,16 @@ button {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 20px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 600px;
-    padding: 1.5rem 30rem;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     background-color: chartreuse;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: black;
 }
@@ -249,28 +247,27 @@ button {
 .personagens-linha {
     display: flex;
     align-items: center;        /* alinha verticalmente */
-    gap: 0.2rem;                /* espaço entre eles */
-    margin-top: 1rem;
+    gap: 0rem;                /* espaço entre eles */
+    margin-top: 0rem;
 }
 
 /* Tamanhos proporcionais */
 .img-doodle {
-    width: 600px;
-    justify-content: flex-start;
+    width: 320px;
     height: auto;
-    padding-left: 15rem;
+    padding-left: 10rem;
 }
 
 .img-junior {
-    width: 400px;
+    width: 150px;
     height: auto;
     padding-left: 0rem;
 }
 
 .img-duo {
-    width: 600px;
+    width: 300px;
     height: auto;
-    padding-right: 15rem;
+    padding-right: 10rem;
 }
 
 /* --- AJUSTES ESPECÍFICOS PARA TELAS DO TAMANHO DO GALAXY A25 --- */
@@ -282,11 +279,11 @@ button {
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 0rem;
     }
 
     .balao {
-        font-size: 2.4rem;
+        font-size: 1rem;
         padding: 1rem 2rem;
     }
 
@@ -303,7 +300,7 @@ button {
     button,
     .continuar,
     .verifica {
-        padding: 1.2rem 1rem;   /* <-- antes estava 30rem, impossível no mobile */
+        padding: 1rem 1rem;   /* <-- antes estava 30rem, impossível no mobile */
         font-size: 2rem;
         width: 95%;
     }
