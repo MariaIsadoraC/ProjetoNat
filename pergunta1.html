@@ -23,9 +23,9 @@
     
     <button class="verifica">VERIFICAR</button>
     
-    <a href="pergunta2.html">
-        <button id="continuar" class="continuar" style="display:none;">CONTINUAR</button>
-    </a>
+
+    <button id="continuar" class="continuar" style="display:none;">CONTINUAR</button>
+    
     
 
     <div id="toast" class="toast"></div>
@@ -77,6 +77,10 @@ function mostrarToast(mensagem, cor) {
 
     // permanece visível (não remove mais automáticamente)
 }
+botaoContinuar.addEventListener("click", () => {
+    window.location.href = "pergunta2.html";
+});
+
 </script>
 
 

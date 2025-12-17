@@ -16,35 +16,51 @@ html, body {
 
 /* --- CONTAINER CENTRAL --- */
 .container {
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 1.9rem;   /* Espaço entre os itens */
+    gap: 0.3rem;   /* Espaço entre os itens */
     text-align: center;
-    padding: 3rem;
+    padding: 3rem 2rem 6rem;
 }
 
 /* --- TÍTULOS --- */
 h1 {
-    font-size: 3.6rem;        
+    font-size: 2rem;        
     font-weight: 900;
     color: white;
 }
 
+.tituloPrincipal{
+    font-size: 2rem;        
+    font-weight: 900;
+    color: white;
+    margin-top: 15rem; 
+}
+
 .balao {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: white;
     background: #ffffff19;    
-    padding: 1.4rem 2.6rem;
+    padding: 1.8rem 2.6rem;
+    border-radius: 1rem;
+    position: relative;
+    text-align: center;
+}
+.balao2 {
+    font-size: 1.4rem;
+    color: white;
+    background: #ffffff19;    
+    padding: 1.8rem 2.6rem;
     border-radius: 1rem;
     position: relative;
     text-align: center;
 }
 
 /* SETINHA DO BALÃO */
-.balao::after {
+.balao::after, .balao2::after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -59,44 +75,52 @@ h1 {
 
 
 .doodle-area {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: flex-start; /* deixa a imagem na ESQUERDA */
-    padding-left: 0rem; /* opcional, para afastar da borda */
+    padding-left: 0.5rem; /* controla o quão colado fica */
+}
+
+.doodle-area2 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start; /* deixa a imagem na ESQUERDA */
+    padding-left: 0.5rem; /* controla o quão colado fica */
 }
 
 
 .doodle {
-    width: 250px;
-    height: 200px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
+    width: 200px;
+}
+.doodle2{
+    width: 100px;
 }
 
 .doodle img {
     width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+    height: auto;
+    display: block;
+}
+.doodle2 img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
 
 /* --- BOTÃO --- */
-button {
+.comecar{
     position: fixed;
-    bottom: 0px;    
+    bottom: 10px;    
     left: 50%;
-    transform: translateX(-50%);  
-    
-    width: 90%;       
-    max-width: 600px;  
-    padding: 1rem 1rem;
-
+    transform: translateX(-50%);        
+    max-width: 500px;  
     border: none;
-    border-radius: 1rem;
-    background-color: chartreuse;
-    font-size: 2rem;
+    border-radius: 0.5rem;
+    background-color: chartreuse ;
+    font-size: 1.4rem;
+    padding: 0.6rem 6rem;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -114,19 +138,19 @@ button {
     padding: 1rem;
 }
 .titulo1 {
-    font-size: 3rem;        
+    font-size: 2rem;        
     font-weight: 900;
     color: white;
     text-align: left;
 }
 .texto1{
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: white;    
     text-align: left;
     font-weight: 300;
 }
 .pergunta1{
-   font-size: 2rem;
+    font-size: 1.4rem;
     color: white;    
     font-weight: 700;
     text-align: left;
@@ -134,7 +158,7 @@ button {
 
 .opcoes {
   list-style: none;
-  padding: 0;
+  padding: 1rem 0.1rem;
   color: white; 
   /* ESSENCIAL */
   display: flex;
@@ -149,13 +173,13 @@ button {
 
 .opcoes li {
   width: 95%;
-  max-width: 600px;
-  padding: 1rem;
-  font-size: 2rem;
+  max-width: 320px;
+  padding: 1.2rem;
+  font-size: 1.4rem;
   color: white;
   background-color: rgba(255,255,255,0.1);
-  border: 1px solid transparent;
-  border-radius: 20px;
+  border: 3px solid transparent;
+  border-radius: 16px;
   text-align: center;
   cursor: pointer;
   transition: 0.2s;
@@ -174,11 +198,13 @@ button {
 
 .verifica {
     width: 90%;
-    bottom: 2px;
+    bottom: 10px;
+    position: fixed;
     left: 50%;
+    transform: translateX(-50%);
     max-width: 500px;
-    padding: 1rem 2rem;
-    font-size: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,6 +216,7 @@ button {
     opacity: 0.5;
     pointer-events: none; /* impede clique */
     transition: 0.2s;
+    z-index: 15;
 }
 
 /* Botão ativado */
@@ -197,7 +224,8 @@ button {
     background-color: chartreuse;
     color: black;
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: auto !important;
+    z-index: 15;
 }
 
 
@@ -205,24 +233,27 @@ button {
 .toast {
     position: fixed;
     align-items: center;
-    bottom: 5.5rem;
+    bottom: 4.3rem;
     right: 1rem;
     left: 1rem;
     padding: 2rem 2rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
     border-radius: 10px;
     background-color: #333;
     color: white;
     opacity: 0;                      /* começa invisível */
     transform: translateY(20px);      /* desliza de baixo */
     transition: 0.3s;
+   
 }
 
 /* Quando aparecer */
 .toast.show {
     opacity: 1;
     transform: translateY(0);
+     z-index: 26;
 }
+
 .continuar {
     display: flex;
     justify-content: center;
@@ -237,104 +268,37 @@ button {
     border: none;
     border-radius: 10px;
     background-color: chartreuse;
-    font-size: 2rem;
+    font-size: 1.4rem !important;
     font-weight: 700;
     color: black;
+    z-index: 20;
 }
 
 /* Página final */
 
 .personagens-linha {
     display: flex;
-    align-items: center;        /* alinha verticalmente */
+    align-items: center;       
     gap: 0rem;                /* espaço entre eles */
-    margin-top: 0rem;
+    
 }
 
 /* Tamanhos proporcionais */
 .img-doodle {
-    width: 320px;
+    width: 190px !important;
     height: auto;
-    padding-left: 10rem;
+    padding-left: 4rem !important;
 }
 
 .img-junior {
-    width: 150px;
+    width: 150px !important;
     height: auto;
     padding-left: 0rem;
 }
 
 .img-duo {
-    width: 300px;
+    width: 160px !important;
     height: auto;
-    padding-right: 10rem;
-}
-
-/* --- AJUSTES ESPECÍFICOS PARA TELAS DO TAMANHO DO GALAXY A25 --- */
-@media (max-width: 430px) {
-
-    .container {
-        gap: 1rem;
-        padding: 1.5rem;
-    }
-
-    h1 {
-        font-size: 0rem;
-    }
-
-    .balao {
-        font-size: 1rem;
-        padding: 1rem 2rem;
-    }
-
-    .doodle {
-        width: 250px;
-        height: 250px;
-    }
-
-    .doodle-area {
-        padding-left: 0;
-        justify-content: center;
-    }
-
-    button,
-    .continuar,
-    .verifica {
-        padding: 1rem 1rem;   /* <-- antes estava 30rem, impossível no mobile */
-        font-size: 2rem;
-        width: 95%;
-    }
-
-    .opcoes li {
-        padding: 1.5rem;
-        font-size: 2.2rem;
-    }
-
-    .toast {
-        padding: 3rem 4rem;
-        font-size: 2.5rem;
-        right: 1rem;
-        bottom: 4rem;
-    }
-
-    /* --- Personagens da página final --- */
-    .personagens-linha {
-        gap: 0.3rem;
-    }
-
-    .img-doodle {
-        width: 200px;
-        padding-left: 0;
-    }
-
-    .img-junior {
-        width: 140px;
-    }
-
-    .img-duo {
-        width: 200px;
-        padding-right: 0;
-    }
-
+    padding-right: 3rem !important;
 }
 
